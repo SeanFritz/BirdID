@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 # use the command 'pip install selenium beautifulsoup4' in teh command prompt to install the libraries
 # ...if you do not have a powershell terminal, install the "Terminal" VS Code extension by Jun Han. It's depreciated, but it works well
 # ...you may also need install a web driver on your computer. This program uses the Chrome Webdriver.
-# To run via the command prompt, use the command 'python DirectoryWebScraper.py'
+# To run via the command prompt, use the command 'python ./Code/DirectoryWebScraper.py'
 
 # Program initialization
 # birdSite = 'https://www.allaboutbirds.org/guide/browse.aspx'
@@ -26,7 +26,7 @@ driver = webdriver.Chrome()                            # Creates a new instance 
 # Getting the HTML content of the page
 try:
     driver.get(birdSite)                                # Opens the bird list page
-    time.sleep(5)                                       # Waits for the page to load
+    time.sleep(2)                                       # Waits for the page to load
     htmlContent = driver.page_source                    # Gets the HTML content of the page
 finally:
     driver.quit()                                       # Closes the web driver
